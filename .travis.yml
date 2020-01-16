@@ -1,6 +1,6 @@
 language: node_js
 node_js:
- - 12
+- 12
 install: npm install
 script: npm test
 notifications:
@@ -8,4 +8,6 @@ notifications:
 deploy:
   provider: heroku
   app_key:
-    secure: $HEROKU_API_KEY
+    secure: "$HEROKU_API_KEY"
+dd:
+  secure: qlh06ikv9NIB815DrZoTMIRUesmpi1HV2gwHGh+F8DSIzVQLiLqYFyAU8I58LArI2DOqBnpvm8c21LrBN08cZ9sVNhL25Rpv+hTlK6ipm7Ks8aglRhHfWe22KuHuqZsCGGAyu/gz4pRfJ814EUofKvn5YDHEN4TPa2a0yJ1wfHFT3oL+j+0sB1ScfNZYweVwns42pn6E6GSJucawPUmNKlXQ/UB3WpImHcgVovMmU/HR1QcluxTPFnnGKia3im/A144pPo+Bb8elvQP/crk+zeLr2AGi6tng3XHCEfWU9OixT0xrLgYeojrFNFTES8dkPDeJpxakKhls2eGPTV3A3J4b2BIe0ZVUcuEK0p2yfNLMwL9bcxN644EoRmgFemH6Mqx2rfN6GKBf+aU3ydlPy/ksxQ1b4zkZcQZlQFOaZcsUEsey8pfDjqTKcZ83eYZn1qjzjmqcHtdDcB9G6ntEnRIXmmd/sTJUvlTPAYlLVU7bxNFXycowMQDPywQyuLTWBXs/MoyZB9ZMDuutsDpxEFfYIFscN63VMSGnQo6xoiCP3BWZ05ruSaTuQLfWYrJGGxk/1KywYih/Z4jwvM/IxGy4jMsq5u0Yn2dKYOl9w8sjmtBwT8mL43KF9rrNRYpoHqiZvC0JZNELzuj7PezEbdqTIXhkGW3YuZYfCFy3rS0=
