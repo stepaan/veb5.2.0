@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "eslint main.js",
-    "prettier": "prettier --config .prettierrc.json index.js",
-    "precommit": "npm run prettier",
-    "prepush": "call npm run test"
+    "prettier": "prettier --config .prettierrc.json index.js"
   },
   "repository": {
     "type": "git",
