@@ -1,0 +1,6 @@
+{
+	"hooks": {
+	"precommit": "npm run prettier",
+    "prepush": "call npm run test"
+    }
+}
