@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "eslint main.js",
+    "test": "eslint index.js",
     "prettier": "prettier --config .prettierrc.json index.js"
   },
   "repository": {
