@@ -1,8 +1,7 @@
 language: node_js
 node_js:
- - node
-script:
- - make lint 
- - make test
- notifications:
+ - 12
+install: npm install
+script: npm test
+notifications:
   email: false
