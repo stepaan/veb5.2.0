@@ -1,0 +1,97 @@
+<HTML> 
+	<HEAD> 
+		<meta charset="utf-8"> 
+		<title>Перший сценарій в HTML-документі</title> 
+		<link rel="stylesheet" type="text/css" href="style7.css">
+		<script>
+			const zodiak = [
+				number => (number > 21) ? 'vodolii' : 'kozerig',
+				number => (number > 20) ? 'ryby' : 'vodolii',
+				number => (number > 21) ? 'oven' : 'ryby',
+				number => (number > 21) ? 'telec' : 'oven',
+				number => (number > 22) ? 'blyzniuki' : 'telec',
+				number => (number > 23) ? 'rak' : 'blyzniuki',
+				number => (number > 24) ? 'lev' : 'rak',
+				number => (number > 24) ? 'diva' : 'lev',
+				number => (number > 24) ? 'terezy' : 'diva',
+				number => (number > 24) ? 'skorpion' : 'terezy',
+				number => (number > 23) ? 'strilec' : 'skorpion',
+				number => (number > 22) ? 'kozerig' : 'strilec',
+			];
+			const animal = [
+				'rat',
+				'cow',
+				'tiger',
+				'hare',
+				'dragon',
+				'change',
+				'horse',
+				'sheep',
+				'monkey',
+				'chicken',
+				'dog',
+				'pig',
+			];
+			const color = [
+				'white',
+				'blue',
+				'green',
+				'red',
+				'yellow',
+			];
+			// const color = [
+			// 	'white',
+			// 	'green',
+			// 	'red',
+			// 	'yellow',
+			// 	'black',
+			// ];
+			function determine_week(date, form) {
+				const d = new Date(date);
+				let onejan = new Date(d.getFullYear(),0,1);
+				const w = Math.ceil((((d - onejan) / 86400000) + onejan.getDay()+1)/7);
+  				console.log(w);
+  				form.week.value = w;
+			}
+			function determine_zodiak(date, form) {
+				const d = new Date(date);
+				console.log(d.getMonth());
+  				form.zodiak.value = zodiak[d.getMonth()](d.getDay());
+			}
+			function detetmine_animal(y, form) {
+				const year = parseInt(y.split('-')[0]);
+				const a_index = Math.abs(parseInt(year % 12 - 4));
+				console.log(a_index);
+				const a = animal[a_index];
+				const c_index = parseInt((Math.abs((year - 1900 - a_index)) / 12 + Math.floor(a_index / 2)) % 5);
+				console.log(c_index);
+				const c = color[c_index];
+				form.animal.value = c + ' ' + a;
+			}
+		</script>
+	</HEAD> 
+	<BODY>
+	<center>
+		<form name="average" class="content">
+			<div class="block">
+				Determine week:
+				<input type="date" name="date">
+				<input type="button" name="deter_week" value="week" onclick="determine_week(date.value, average)">
+				<input type="text" name="week">
+			</div>
+			<div class="block">
+				Enter date:
+				<input type="date" name="born">
+				<input type="button" name="deter_zodiak" value="zodiak" onclick="determine_zodiak(born.value, average)">
+				<input type="text" name="zodiak">
+			</div>
+			<div class="block">
+				Enter year:
+				<input type="date" name="year">
+				<input type="button" name="deter_animal" value="Animal" onclick="detetmine_animal(year.value, average)">
+				<input type="text" name="animal">
+			</div>
+		</form>
+	</center>
+	</BODY> 
+</HTML> 

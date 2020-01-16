@@ -1,0 +1,27 @@
+{
+  "name": "veb5.2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint main.js",
+    "prettier": "prettier --config .prettierrc.json index.js",
+    "precommit": "npm run prettier",
+    "prepush": "call npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stepaan/veb5.2.0.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stepaan/veb5.2.0/issues"
+  },
+  "homepage": "https://github.com/stepaan/veb5.2.0#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "husky": "^4.0.10",
+    "prettier": "^1.19.1"
+  }
+}

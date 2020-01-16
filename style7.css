@@ -1,0 +1,54 @@
+.submit {
+	background: white;
+	border: 2px solid grey;
+	border-radius: 2px;
+	color: black;
+	margin: 5px 5px;
+	width: auto;
+}
+.submit:hover {
+	background: #b39696;
+}
+
+.content {
+	width: 300px;
+	border: 2px solid #999999;
+	background: #d1d1d1;
+	border-radius: 10px;
+	padding: 20px 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.block {
+	background: grey;
+	border: 2px solid #4a4332;
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+	margin: 10px 5px;
+	padding: 10px 10px;
+}
+
+.photo {
+	border: 2px solid #4a4332;
+	border-radius: 4px;
+	margin: 5px 5px;
+	padding: 3px 3px;
+}
+
+.flextable {
+	width: 400px;
+}
+
+.main {
+	display: flex;
+	width: auto;
+}
+
+.item {
+	border: 1px solid black;
+	flex-grow: 1;
+	height: 80px;
+}
