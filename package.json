@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
     "test": "eslint index.js",
     "prettier": "prettier --config .prettierrc.json index.js",
     "hooks": {
   "precommit": "npm run prettier",
-    "prepush": "call npm run test"
+    "prepush": "call npm run test",
+        "start": "node index.js"
     }
   },
   "repository": {
