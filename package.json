@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "eslint index.js",
+    "test": "eslint --ignore-pattern '/node_modules/' index.js", 
     "prettier": "prettier --config .prettierrc.json index.js",
     "hooks": {
     "precommit": "npm run prettier",
